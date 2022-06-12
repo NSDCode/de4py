@@ -20,6 +20,7 @@ class de4py:
             raise FileNotFoundError
 
 
+
     def execute_protections(self):
         StringEncryption.HexStringEncryption.decode(self.tokens)
 
@@ -28,6 +29,7 @@ if __name__ == "__main__":
     deobfuscator = de4py()
 
     deobfuscator.execute_protections()
+
 
     with open("out.py", 'wb') as f:
         f.write(tokenize.untokenize(deobfuscator.tokens))
